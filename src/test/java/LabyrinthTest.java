@@ -7,6 +7,7 @@
 import com.progmatic.labyrinthproject.Coordinate;
 import com.progmatic.labyrinthproject.LabyrinthImpl;
 import com.progmatic.labyrinthproject.RandomPlayer;
+import com.progmatic.labyrinthproject.WallFollowerPlayer;
 import com.progmatic.labyrinthproject.enums.CellType;
 import com.progmatic.labyrinthproject.enums.Direction;
 import com.progmatic.labyrinthproject.exceptions.CellException;
@@ -398,16 +399,12 @@ public class LabyrinthTest {
 
 
     public Player getRandomPlayerImpl() {
-        LabyrinthImpl lab = new LabyrinthImpl();
-        lab.loadLabyrinthFile("C:\\progmatic-labyrinth\\labyrinth1.txt");
-        RandomPlayer rp = new RandomPlayer();
-        rp.nextMove(lab);
-      return rp;
+        return new RandomPlayer();
     }
 
-    // TODO
+
     private Player getWallFollowerPlayerImpl() {
-        return null;
+        return new WallFollowerPlayer();
     }
 
     // TODO

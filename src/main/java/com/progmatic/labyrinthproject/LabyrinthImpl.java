@@ -132,10 +132,10 @@ public class LabyrinthImpl implements Labyrinth {
             case END:
                 labirintus[row][col] = 'E';
                 break;
-            case START:
+            default:
                 labirintus[row][col] = 'S';             //beallitani a players start pos.
                 setCellType(new Coordinate(col, row), CellType.START);
-                break;
+
         }
     }
 
